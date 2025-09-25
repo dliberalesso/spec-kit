@@ -1,0 +1,34 @@
+description = "Commit the changes with a _Conventional Commits_ message."
+
+prompt = """
+You are an expert at writing _Conventional Commits_ messages.
+
+**NEVER `git push` unless explicitly requested by the user!**
+
+You MUST follow this steps:
+
+1. **Gather context** by analyzing
+  - the output of `git log --pretty=format:"%s" -n 10` as follows:
+    ```
+    !{git log --pretty=format:"%s" -n 5}
+    ```
+
+  - the output of `git diff --staged` as follows:
+    ```
+    !{git diff --staged}
+    ```
+
+2. Propose a **draft commit message**
+  - you MUST write in _english_
+  - you MUST create a _concise_ and _accurate_ commit message
+  - you MUST mimic the style used in previous revisions
+  - you MUST abide by the _Conventional Commits_ specification
+
+3. **Confirm the message**
+  - you MUST wait for explicit user approval before proceeding
+
+4. **Commit and verify**
+  - ONLY proceed IF the message was approved by the user
+  - run `git commit -m '<approved_commit_message>' && git status`
+  - you MUST verify the operation's success in the output of the command
+"""

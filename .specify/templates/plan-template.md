@@ -47,7 +47,14 @@
 ## Constitution Check
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- **I. Spec-Driven Gate**: Is the plan derived from a complete and unambiguous `spec.md`? Does every technical decision trace back to a specific requirement?
+- **II. AI Agent Agnosticism Gate**: Does the plan avoid agent-specific features or dependencies? If not, is a generic fallback available and the specialization justified?
+- **III. Convention Gate**: Does the proposed file structure, component naming, and data models adhere to the project's established conventions?
+- **IV. Workflow Gate**: Does the plan respect the standard SDD workflow? It must not propose generating implementation before tasks are defined or skipping the clarification phase.
+- **V. Automated Release Gate**: Does the plan rely on the standard, automated release process? It must not introduce manual release steps.
+- **VI. Versioning Gate**: If the plan modifies CLI functionality, does it account for versioning in `pyproject.toml` and `CHANGELOG.md`?
+- **VII. Template-Driven Gate**: Does the plan generate user-facing artifacts from templates rather than hardcoding them?
+- **VIII. Quality Gate**: Were all `[NEEDS CLARIFICATION]` markers in the source `spec.md` resolved before this plan was generated?
 
 ## Project Structure
 
@@ -209,4 +216,4 @@ ios/ or android/
 - [ ] Complexity deviations documented
 
 ---
-*Based on Constitution v2.1.1 - See `/memory/constitution.md`*
+*Based on Constitution v1.0.0 - See `.specify/memory/constitution.md`*

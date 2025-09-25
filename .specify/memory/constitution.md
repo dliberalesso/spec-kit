@@ -1,50 +1,58 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+---
+Sync Impact Report
+---
+Version: 0.0.0 → 1.0.0
+Modified Sections:
+  - None.
+Added Sections:
+  - I. Spec-Driven Development
+  - II. AI Agent Agnosticism
+  - III. Convention over Configuration
+  - IV. Structured & Automated Workflow
+  - V. Automated Release Process
+  - VI. Strict Versioning Discipline
+  - VII. Template-Driven Quality
+  - VIII. Ambiguity Resolution
+Removed Sections:
+  - None. Principles were re-ordered and expanded.
+Templates Requiring Updates:
+  - None. All artifacts are in sync with this constitution.
+Follow-up TODOs:
+  - TODO(RATIFICATION_DATE): Specify the date when these principles were formally adopted.
+-->
+# spec-kit Constitution
+
+This constitution defines the core principles for the development and maintenance of the `spec-kit` repository itself. All contributions and automated processes MUST adhere to these articles to ensure consistency, quality, and architectural integrity.
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Spec-Driven Development
+The development of `spec-kit` itself, where applicable, should follow the Spec-Driven Development (SDD) methodology it promotes. Plans must be derived from clear specifications, and every technical decision should trace back to a specific requirement.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. AI Agent Agnosticism
+The framework MUST be designed to support multiple AI coding assistants and avoid vendor lock-in. New agent integrations must follow the established conventions for directory structure, command formats, and argument passing, as documented in `AGENTS.md` and `GEMINI.md`.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Convention over Configuration
+The toolkit MUST favor strong, documented conventions for directory structures, file formats, and release packaging. This minimizes complexity and ensures a predictable development experience.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Structured & Automated Workflow
+The SDD workflow (`/specify`, `/plan`, `/tasks`, etc.) is a core feature. The tool's development must protect and enhance this structured process, ensuring it remains consistent and automated.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Automated Release Process
+The release process MUST be automated through the GitHub Actions workflows defined in `.github/workflows/`. Manual releases are prohibited. This ensures that all templates for all supported agents are packaged and published consistently.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### VI. Strict Versioning Discipline
+Any functional change to the `specify-cli` tool, particularly to `src/specify_cli/__init__.py`, MUST be accompanied by a corresponding version increment in `pyproject.toml` and a new entry in `CHANGELOG.md`.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### VII. Template-Driven Quality
+The `specify-cli`'s primary function is to generate project structures from master templates. All generated artifacts for end-users MUST originate from these templates. Quality is enforced by embedding constraints and checklists within them.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### VIII. Ambiguity Resolution
+The process must enforce clarity. All ambiguities or `[NEEDS CLARIFICATION]` markers in a specification MUST be resolved before a development plan can be finalized.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution is the highest authority for the `spec-kit` project. All development practices and agent integrations must comply with its principles. Amendments require a formal proposal, review by project maintainers, and a clear plan for propagating changes across all relevant templates and scripts.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): Specify the date when these principles were formally adopted. | **Last Amended**: 2025-09-25

@@ -12,14 +12,16 @@ The primary component of this repository is the **`specify-cli`**, a Python-base
 
 *   **Spec-Driven Development (SDD):** A development workflow where the specification is the primary source of truth, and code is a generated output. The process is iterative and relies heavily on AI to translate high-level requirements into technical plans and then into functional code.
 *   **`specify-cli`:** The main tool in this repo. Its `init` command sets up a new project with the necessary templates, scripts, and AI agent configurations.
-*   **AI Agent Agnosticism:** A core architectural feature. The `specify-cli` is designed as a framework to support various AI coding assistants (e.g., Gemini, Claude, GitHub Copilot). It achieves this by generating agent-specific command files (e.g., TOML for Gemini, Markdown for Claude) and directory structures (`.gemini/`, `.claude/`).
+*   **AI Agent Agnosticism:** A core architectural feature. The `specify-cli` is designed as a framework to support various AI coding assistants (e.g., Gemini, Claude, GitHub Copilot). It achieves this by generating agent-specific command files (e.g., TOML for Gemini, Markdown for Claude) and directory structures (`.gemini/`, `.claude/`). This is formalized in the project's constitution.
 *   **Slash Commands:** Once a project is initialized, developers use a series of slash commands within their chosen AI agent to follow the SDD workflow:
     1.  `/constitution`: Establish project-wide principles and constraints.
     2.  `/specify`: Define the feature's requirements (the "what" and "why").
     3.  `/clarify`: Allow the AI to ask questions to resolve ambiguities.
     4.  `/plan`: Define the technical implementation strategy (the "how," including tech stack).
     5.  `/tasks`: Break the plan into a detailed, actionable list of tasks.
-    6.  `/implement`: Execute the tasks to generate the application code.
+    6.  `/analyze`: Perform a non-destructive cross-artifact consistency and quality analysis.
+    7.  `/implement`: Execute the tasks to generate the application code.
+*   **Constitution & Workflow:** Development within a generated project is guided by a `/constitution` command that establishes project-wide principles. This ensures a structured, repeatable workflow from specification to implementation.
 
 ## 2. Building and Running
 
